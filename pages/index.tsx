@@ -26,7 +26,13 @@ function normalizeExcelDevice(row: Record<string, any>) {
   }
 }
 
-export default function Home({ devices }: { devices: Device[] }) {
+export default function Home({
+  devices,
+  authError,
+}: {
+  devices: Device[]
+  authError?: string | null
+}) {
   const [query, setQuery] = useState('')
   const [country, setCountry] = useState('All')
   const [project, setProject] = useState('All')
@@ -84,10 +90,24 @@ export default function Home({ devices }: { devices: Device[] }) {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <header className="mb-6">
-        <h1 className="text-3xl font-semibold">Edge Devices Dashboard</h1>
-        <p className="text-sm text-white">Overview of devices from the repository references.</p>
+      <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h1 className="text-3xl font-semibold">Edge Devices Dashboard</h1>
+          <p className="text-sm text-white">Overview of devices from the repository references.</p>
+        </div>
+        <a
+          href="/api/auth/logout"
+          className="shrink-0 rounded-md border border-gray-600 px-3 py-2 text-sm text-white hover:bg-gray-800"
+        >
+          Sign out
+        </a>
       </header>
+
+      {authError ? (
+        <div className="mb-4 rounded-md border border-red-700 bg-red-950/50 px-4 py-3 text-sm text-red-200">
+          Sign-in failed: {authError}
+        </div>
+      ) : null}
 
       <section className="mb-4 grid grid-cols-1 md:grid-cols-4 gap-3">
         <input
@@ -251,7 +271,7 @@ export default function Home({ devices }: { devices: Device[] }) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const p = path.join(process.cwd(), 'data', '190826_edge_Devices.json')
   let devices = []
   try {
@@ -261,5 +281,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } catch (e) {
     console.error('Failed to read devices:', e)
   }
-  return { props: { devices } }
+  const authError = context.query.auth_error
+  return {
+    props: {
+      devices,
+      authError: typeof authError === 'string' ? authError : null,
+    },
+  }
 }
