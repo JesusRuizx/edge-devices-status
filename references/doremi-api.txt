@@ -1,0 +1,37 @@
+fetch("https://www.doremi.slb.com/services/device/api/v2/devices/list/short", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9,es;q=0.8,es-US;q=0.7",
+    "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ik1UYzROekV3TkRnd05RPT0iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJmMTgxNzE5NjcyOTY0YmMyYmNmMGY5ZmI3ZDU4NGM0MiIsImRlc2lkIjoiIiwiZW1haWwiOiJqcnVpejEwNUBzbGIuY29tIiwic3ViaWQiOiJlNjBlNTllYy04OGMxLTRhYTgtODIxYS05NzBhNjg2YjY5M2IiLCJvaWQiOiI3M2RjOTQ3YS1hZjMxLTQyYjgtYjJmOC02MmM1YzBiYzBkNzUiLCJ2ZXIiOiIyLjAiLCJpc3MiOiJodHRwczovL2NzaS5zbGIuY29tL3YyIiwic3ViIjoianJ1aXoxMDVAc2xiLmNvbSIsImF1ZCI6ImYxODE3MTk2NzI5NjRiYzJiY2YwZjlmYjdkNTg0YzQyIiwiZXhwIjoxNzg3MTUyNzg3LCJpYXQiOjE3ODcxNDkxODcsImp0aSI6ImF0LjFmOGM1OGRmOTg3ZDQ4NWZhOTE1NTFjNTJkNzA0ZWI5IiwidGlkIjoiNDFmZjI2ZGMtMjUwZi00YjEzLTg5ODEtNzM5YmU4NjEwYzIxIn0.uA54rBLkyB7LqgDw3QZr92xbAXOb2KVD1tLNAZkk5GMYUmtuyQCqYJiOanp3gYDkIbXADOxB8hZsRzoTT198NJKD7ea4E-xx861MEfsgqBTy57w_0LvuwmsrpTv-rcG71yRfJknQ5_Feg7pV0ZanVFQO0S8X0S49PLnUbMllcO1wtcw9H-A91xu3sFznWWzNopE_EnVO1qw1EFjWn6BJSuK7866Gy0t5Ye-3P0KQ0nQfDtpYC2-GWU9q9_jfWOYnOfBBtxMm9BGksZg0UCSkL5MRMf0HFU4o8YxhpMVK7hNo0TE7lAAHWvuxHbZUkIxcH1jaAFpQrAtVsqzDw2MDgw",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Microsoft Edge\";v=\"151\", \"Chromium\";v=\"151\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "cookie": "OptanonAlertBoxClosed=2026-03-31T17:11:32.153Z; _fbp=fb.1.1774977093231.517999128719091577; dnUpdate=JRuiz105; _ga_54TYHQ61RB=GS2.1.s1775659999$o2$g0$t1775659999$j60$l0$h0; _ga_53ST7ZSJY5=GS2.1.s1781071243$o2$g0$t1781071243$j60$l0$h0; ajs_user_id=d6d476f4-26ed-5194-9d4e-d30b2750e635; ajs_anonymous_id=ddbe316c-aa8f-4c31-b577-e2571d2fcbe4; is_internal_user=isInternalTraffic=False&wasAuthenticated=False; _gcl_au=1.1.214223126.1785343933; slb.user.referrers=https://login.microsoftonline.com/; _ga_F0PTK2ELVJ=GS2.1.s1786731166$o154$g0$t1786731166$j60$l0$h0; _clck=1tr3zcx%5E2%5Eg8l%5E1%5E2417; OptanonConsent=isGpcEnabled=0&datestamp=Fri+Aug+14+2026+12%3A14%3A08+GMT-0600+(Central+Standard+Time)&version=202510.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=a0ee9937-281f-4788-a916-891b833853d9&interactionCount=2&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0004%3A1%2CC0005%3A1%2CC0003%3A1%2CC0002%3A1&AwaitingReconsent=false&intType=1&geolocation=MX%3BTAB; _ga_L1D31GSNJ9=GS2.1.s1786731239$o13$g1$t1786731265$j34$l0$h0; _ga_JMLG4M3YG9=GS2.1.s1786731239$o10$g1$t1786731265$j34$l0$h0; _ga_HM53HY9J08=GS2.1.s1786731239$o8$g1$t1786731265$j34$l0$h0; _gid=GA1.2.2113539672.1786977390; _ga_XFP4B18PR8=GS2.2.s1787002435$o66$g1$t1787002600$j10$l0$h0; dtCookietm4gx6yl=v_4_srv_1_sn_552F764B717CBADA8895398E8D94C3BD_perc_100000_ol_0_mul_1_app-3A60759558e7733622_1_rcs-3Acss_0; rxVisitortm4gx6yl=1787068172488VTBLJNKJ5R0FO9TOKN1H3QLUOLH1BOCL; dtSatm4gx6yl=-; _ga=GA1.1.1493535872.1774284023; rxVisitor=17870686072576VU2CU5D8OKRP4HCA0959SHT6O32NF5R; dtPCtm4gx6yl=1$268172478_340h-vNDHDGVJHSPPFUWEPVCMMOORMPEFPRPDS-0e0; rxvttm4gx6yl=1787071776672|1787069976672; dtCookie=v_4_srv_9_sn_OFMB4RL3K1RVJCVCODME966LKANTP547_app-3A81544354b0ac504e_1_app-3A7fe452185ef3eef5_1_ol_0_perc_100000_mul_1_rcs-3Acss_0; _ga_5MF61XBLN3=GS2.1.s1787080923$o58$g1$t1787081015$j60$l0$h0; rxvt=1787082820691|1787081020691; dtSa=-; dtPC=9$268607253_519h-vITKCRMDBOJHCRFSMNUTTPUFUVGVPURPT-0e0; _ga_4C6C8ZPXZV=GS2.1.s1787081031$o20$g1$t1787082175$j60$l0$h0; _ga_P4WWJVHYKG=GS2.1.s1787081031$o20$g1$t1787082175$j60$l0$h0",
+    "Referer": "https://www.doremi.slb.com/"
+  },
+  "body": null,
+  "method": "GET"
+});
+
+fetch("https://www.doremi.slb.com/services/device/api/v2/devices/list/base", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "en-US,en;q=0.9,es;q=0.8,es-US;q=0.7",
+    "authorization": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6Ik1UYzROekV3TkRnd05RPT0iLCJ0eXAiOiJKV1QifQ.eyJhenAiOiJmMTgxNzE5NjcyOTY0YmMyYmNmMGY5ZmI3ZDU4NGM0MiIsImRlc2lkIjoiIiwiZW1haWwiOiJqcnVpejEwNUBzbGIuY29tIiwic3ViaWQiOiJlNjBlNTllYy04OGMxLTRhYTgtODIxYS05NzBhNjg2YjY5M2IiLCJvaWQiOiI3M2RjOTQ3YS1hZjMxLTQyYjgtYjJmOC02MmM1YzBiYzBkNzUiLCJ2ZXIiOiIyLjAiLCJpc3MiOiJodHRwczovL2NzaS5zbGIuY29tL3YyIiwic3ViIjoianJ1aXoxMDVAc2xiLmNvbSIsImF1ZCI6ImYxODE3MTk2NzI5NjRiYzJiY2YwZjlmYjdkNTg0YzQyIiwiZXhwIjoxNzg3MTU1NzA0LCJpYXQiOjE3ODcxNTIxMDQsImp0aSI6ImF0LjA1MTE0OWUxMmZiNjQ0ZmRiNzUxNDRkMWQ3ZDc3NTgwIiwidGlkIjoiNDFmZjI2ZGMtMjUwZi00YjEzLTg5ODEtNzM5YmU4NjEwYzIxIn0.NduqSAVhTk6HNon9cXKBOU147pixe2xxEPNmU8zYdGbq1-8yigHNGS8IctuxD_4vKHbjBh9LZK00Q0eotM9PWihgMjA0zj-wheGXgkIoWCBmxxrwOnC5pBjhpj-TUrQumRN83_TXnKXFC-Wh5Jr9j8vhjItAypmRNULylKIsEHHjZPIMv90uqhqChyeu29eiT9hLE6He3CL_QSMTfewI5alSFhchG6ZbU6t-4P69noCFEHg6bHXaRQNunpaLjCuk7_6Uv_fJgWe-z7hEqlwL2nIZE0W6tBR_3lEKLjB4y82bZOMs8RBO9SiUXGfSljjoXT39PaNL2sS_93S477Ua9g",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Not=A?Brand\";v=\"99\", \"Microsoft Edge\";v=\"151\", \"Chromium\";v=\"151\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "cookie": "OptanonAlertBoxClosed=2026-03-31T17:11:32.153Z; _fbp=fb.1.1774977093231.517999128719091577; dnUpdate=JRuiz105; _ga_54TYHQ61RB=GS2.1.s1775659999$o2$g0$t1775659999$j60$l0$h0; _ga_53ST7ZSJY5=GS2.1.s1781071243$o2$g0$t1781071243$j60$l0$h0; ajs_user_id=d6d476f4-26ed-5194-9d4e-d30b2750e635; ajs_anonymous_id=ddbe316c-aa8f-4c31-b577-e2571d2fcbe4; is_internal_user=isInternalTraffic=False&wasAuthenticated=False; _gcl_au=1.1.214223126.1785343933; slb.user.referrers=https://login.microsoftonline.com/; _ga_F0PTK2ELVJ=GS2.1.s1786731166$o154$g0$t1786731166$j60$l0$h0; _clck=1tr3zcx%5E2%5Eg8l%5E1%5E2417; OptanonConsent=isGpcEnabled=0&datestamp=Fri+Aug+14+2026+12%3A14%3A08+GMT-0600+(Central+Standard+Time)&version=202510.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=a0ee9937-281f-4788-a916-891b833853d9&interactionCount=2&isAnonUser=1&landingPath=NotLandingPage&groups=C0001%3A1%2CC0004%3A1%2CC0005%3A1%2CC0003%3A1%2CC0002%3A1&AwaitingReconsent=false&intType=1&geolocation=MX%3BTAB; _ga_L1D31GSNJ9=GS2.1.s1786731239$o13$g1$t1786731265$j34$l0$h0; _ga_JMLG4M3YG9=GS2.1.s1786731239$o10$g1$t1786731265$j34$l0$h0; _ga_HM53HY9J08=GS2.1.s1786731239$o8$g1$t1786731265$j34$l0$h0; _gid=GA1.2.2113539672.1786977390; _ga_XFP4B18PR8=GS2.2.s1787002435$o66$g1$t1787002600$j10$l0$h0; _ga_5MF61XBLN3=GS2.1.s1787080923$o58$g1$t1787081015$j60$l0$h0; _ga_4C6C8ZPXZV=GS2.1.s1787081031$o20$g1$t1787082175$j60$l0$h0; _ga_P4WWJVHYKG=GS2.1.s1787081031$o20$g1$t1787082175$j60$l0$h0; dtCookietm4gx6yl=v_4_srv_1_sn_21D4BA46AEF7E42FA907BAEE6C8E7DA4_perc_100000_ol_0_mul_1_app-3A60759558e7733622_1; rxVisitortm4gx6yl=1787151914253NKJNENDJ0O1F9L5JERS2UP0FS95A7N4B; dtSatm4gx6yl=-; _ga=GA1.2.1493535872.1774284023; rxvttm4gx6yl=1787153716120|1787151914263; dtPCtm4gx6yl=1$351914247_137h-vBMVMAHMRIDDUVFTQCCEPWLPDFNIDABWB-0e0",
+    "Referer": "https://www.doremi.slb.com/"
+  },
+  "body": null,
+  "method": "GET"
+});
